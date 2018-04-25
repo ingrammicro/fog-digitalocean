@@ -5,8 +5,8 @@ require "fog/digitalocean/version"
 
 Gem::Specification.new do |s|
   s.specification_version = 2 if s.respond_to? :specification_version=
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-
+  s.required_ruby_version = '>= 2.0.0'
+  
   ## Leave these as is they will be modified for you by the rake gemspec task.
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
@@ -43,18 +43,18 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.extra_rdoc_files = %w[README.md]
 
-  s.add_development_dependency 'bundler', '~> 1.6'
+  s.add_development_dependency 'bundler', '~> 1.15'
   s.add_development_dependency 'rake',    '~> 10.0'
   s.add_development_dependency 'shindo',  '~> 0.3'
-  s.add_development_dependency 'rubyzip', '~> 0.9.9'
+  s.add_development_dependency 'rubyzip', '~> 1.2.1'
   s.add_development_dependency 'mime-types'
   s.add_development_dependency 'mime-types-data'
   s.add_development_dependency 'rubocop'
 
-  s.add_dependency 'fog-core',  '~> 1.42'
-  s.add_dependency 'fog-json',  '>= 1.0'
-  s.add_dependency 'fog-xml',   '>= 0.1'
-  s.add_dependency 'ipaddress', '>= 0.5'
+  s.add_dependency 'fog-core',  '~> 2.1'
+  s.add_dependency 'fog-json',  '~> 1.1'
+  s.add_dependency 'fog-xml',   '~> 0.1'
+  s.add_dependency 'ipaddress', '~> 0.8'
 
   s.files = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- {spec,tests}/*`.split("\n")
